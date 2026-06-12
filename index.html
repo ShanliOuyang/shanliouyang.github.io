@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shanli Ouyang 的个人主页，展示个人介绍、能力方向、作品项目与联系方式。">
+  <title>Shanli Ouyang | Personal Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Inter:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="回到首页">
+      <span class="brand-mark">SO</span>
+      <span>Shanli Ouyang</span>
+    </a>
+
+    <nav class="nav-links" aria-label="主导航">
+      <a href="#about">关于我</a>
+      <a href="#work">作品</a>
+      <a href="#contact">联系</a>
+    </nav>
+
+    <button class="theme-toggle" type="button" aria-label="切换深色模式" aria-pressed="false">
+      <span class="theme-icon">☾</span>
+    </button>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Personal Website</p>
+        <h1>你好，我是<br>Shanli Ouyang</h1>
+        <p class="hero-text">
+          这是我的个人网页。我在这里整理个人介绍、学习方向、项目作品和联系方式，让别人更快认识我。
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#work">查看作品</a>
+          <a class="button secondary" href="#contact">联系我</a>
+        </div>
+      </div>
+
+      <div class="portrait-panel" aria-label="个人照片">
+        <img src="images/MyPic.jpg" alt="Shanli Ouyang 的个人照片">
+      </div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">About</p>
+        <h2>把想法做成可以被看见的东西。</h2>
+      </div>
+      <div class="about-grid">
+        <article class="info-card">
+          <span class="card-number">01</span>
+          <h3>个人介绍</h3>
+          <p>我正在建设自己的网页空间，用它记录成长、展示项目，也作为 GitHub Pages 上的个人主页。</p>
+        </article>
+        <article class="info-card">
+          <span class="card-number">02</span>
+          <h3>关注方向</h3>
+          <p>我对网页设计、前端开发、视觉表达和数字作品展示感兴趣，喜欢让页面既清晰又有质感。</p>
+        </article>
+        <article class="info-card">
+          <span class="card-number">03</span>
+          <h3>页面计划</h3>
+          <p>之后可以继续加入简历、项目截图、课程作品、博客文章、社交链接和更多互动效果。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section work-section" id="work">
+      <div class="section-heading compact">
+        <p class="eyebrow">Selected Work</p>
+        <h2>作品与内容模块</h2>
+      </div>
+
+      <div class="work-list">
+        <article class="work-item">
+          <div>
+            <p class="work-tag">Website</p>
+            <h3>个人主页</h3>
+          </div>
+          <p>使用 HTML、CSS 和 JavaScript 搭建，可部署到 GitHub Pages。</p>
+        </article>
+        <article class="work-item">
+          <div>
+            <p class="work-tag">Portfolio</p>
+            <h3>作品展示区</h3>
+          </div>
+          <p>预留项目卡片位置，方便后续添加图片、链接、课程作业或开发项目。</p>
+        </article>
+        <article class="work-item">
+          <div>
+            <p class="work-tag">Design</p>
+            <h3>视觉与排版</h3>
+          </div>
+          <p>采用响应式布局，在手机和电脑上都能保持整洁清楚的阅读体验。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2>欢迎来到我的网页。</h2>
+      </div>
+      <p>
+        你可以把这里改成邮箱、GitHub、LinkedIn、微信二维码或任何希望公开展示的联系方式。
+      </p>
+      <a class="button primary" href="mailto:your-email@example.com">发送邮件</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Shanli Ouyang. Built with HTML, CSS and JavaScript.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
