@@ -1,122 +1,216 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Shanli Ouyang 的个人主页，展示个人介绍、能力方向、作品项目与联系方式。">
+  <meta name="description" content="Personal website of Shanli Ouyang, focused on AI systems, RAG, reinforcement learning, and data engineering projects.">
   <title>Shanli Ouyang | Personal Website</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Inter:wght@500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#home" aria-label="回到首页">
-      <span class="brand-mark">SO</span>
-      <span>Shanli Ouyang</span>
-    </a>
+  <main class="page-shell" id="home">
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Back to home">
+        <span class="brand-mark">SO</span>
+        <span>Shanli Ouyang</span>
+      </a>
 
-    <nav class="nav-links" aria-label="主导航">
-      <a href="#about">关于我</a>
-      <a href="#work">作品</a>
-      <a href="#contact">联系</a>
-    </nav>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#education" data-i18n="nav.education">Education</a>
+        <a href="#experience" data-i18n="nav.experience">Experience</a>
+        <a href="#projects" data-i18n="nav.projects">Projects</a>
+        <a href="#skills" data-i18n="nav.skills">Skills</a>
+      </nav>
 
-    <button class="theme-toggle" type="button" aria-label="切换深色模式" aria-pressed="false">
-      <span class="theme-icon">☾</span>
-    </button>
-  </header>
+      <div class="header-actions">
+        <div class="lang-switcher" aria-label="Language switcher">
+          <button class="lang-button active" type="button" data-lang="en">EN</button>
+          <button class="lang-button" type="button" data-lang="zh">中</button>
+          <button class="lang-button" type="button" data-lang="es">ES</button>
+        </div>
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+          <span class="theme-icon">Moon</span>
+        </button>
+      </div>
+    </header>
 
-  <main id="home">
     <section class="hero">
+      <img class="astronaut-bg" src="images/astronaut.jpeg" alt="" aria-hidden="true">
+
+      <aside class="profile-card" aria-label="Profile and contact">
+        <img class="portrait" src="images/MyPic.jpg" alt="Portrait of Shanli Ouyang">
+        <h1>Shanli Ouyang</h1>
+        <p class="cn-name">欧阳山立</p>
+        <p data-i18n="hero.role">Data Science · AI Systems · Big Data</p>
+        <div class="mini-contacts">
+          <div class="contact-line">
+            <span>Email</span>
+            <strong>shanliouyang31@gmail.com</strong>
+          </div>
+          <div class="contact-line">
+            <span>School</span>
+            <strong>shanlio@andrew.cmu.edu</strong>
+          </div>
+          <div class="contact-line">
+            <span>Phone</span>
+            <strong>+86 133 1881 4379</strong>
+          </div>
+          <a href="https://github.com/ShanliOuyang" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </aside>
+
       <div class="hero-copy">
-        <p class="eyebrow">Personal Website</p>
-        <h1>你好，我是<br>Shanli Ouyang</h1>
-        <p class="hero-text">
-          这是我的个人网页。我在这里整理个人介绍、学习方向、项目作品和联系方式，让别人更快认识我。
-        </p>
-        <div class="hero-actions">
-          <a class="button primary" href="#work">查看作品</a>
-          <a class="button secondary" href="#contact">联系我</a>
+        <p class="eyebrow intro-label" data-i18n="hero.eyebrow">Introduction</p>
+        <div class="hero-text">
+          <p data-i18n="hero.text.one">I come from Canton City, Kwongtung Province of China, and I am a Data Science student with a solid engineering foundation from SUSTech and a graduate student at CMU’s Heinz College. My passion lies in developing reliable, agentic AI systems that bridge the gap between complex data and actionable insights.</p>
+          <p data-i18n="hero.text.two">Currently, I am focused on advancing my expertise in Business Intelligence and Data Analytics at CMU while seeking opportunities in AI Engineering (AIE), Machine Learning Engineering (MLE), and Data Science (DS).</p>
+          <p data-i18n="hero.text.three">I am always open to discussing related topics such as LLM applications, job opportunities, and so on. What's more, I can speak Chinese in Mandarin, Cantonese, Hokkien and other topolects. Let’s connect!</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-grid">
+      <section class="panel" id="education">
+        <div class="section-title">
+          <p class="eyebrow" data-i18n="section.education">Education</p>
+          <h2 data-i18n="education.title">Academic Path</h2>
+        </div>
+        <article class="timeline-item">
+          <span class="time">Sep 2022 - Jun 2026</span>
+          <h3>Southern University of Science and Technology</h3>
+          <p data-i18n="education.sustech.degree">B.Eng. in Data Science and Big Data Technology · GPA 3.76/4.0</p>
+          <p class="muted" data-i18n="education.sustech.meta">Scholarship Top 10% · Coursework: OOP Java, Data Structures, AI, Machine Learning, Hadoop</p>
+        </article>
+        <article class="timeline-item">
+          <span class="time">Jul 2025 - Aug 2025</span>
+          <h3>North Carolina State University</h3>
+          <p data-i18n="education.ncsu.degree">Summer Research Student, Center for Research in Scientific Computation</p>
+          <p class="muted" data-i18n="education.ncsu.meta">Research on reinforcement learning for inverted pendulum stabilization.</p>
+        </article>
+        <article class="timeline-item">
+          <span class="time">Aug 2026 - Dec 2027</span>
+          <h3>Carnegie Mellon University, Heinz College</h3>
+          <p data-i18n="education.cmu.degree">Business Intelligence and Data Analytics</p>
+          <p class="muted" data-i18n="education.cmu.meta">Coursework: Applied Python, Introduction to Deep Learning</p>
+        </article>
+      </section>
+
+      <section class="panel" id="experience">
+        <div class="section-title">
+          <p class="eyebrow" data-i18n="section.experience">Experience</p>
+          <h2 data-i18n="experience.title">Research & Internship</h2>
+        </div>
+        <article class="experience-item">
+          <span class="time">Jun 2025 - Apr 2026</span>
+          <h3 data-i18n="experience.rag.title">Agent-Enhanced RAG Formula Retrieval</h3>
+          <p data-i18n="experience.rag.text">Built a Plan-Retrieve-Solve-Critic loop in a SUSTech × Deepexi Technology research project, using GPT semantic re-ranking to raise formula retrieval recall from 55% to 73% on a 300-question benchmark.</p>
+        </article>
+        <article class="experience-item">
+          <span class="time">Jul 2025 - Aug 2025</span>
+          <h3 data-i18n="experience.rl.title">Inverted Pendulum Stabilization with RL</h3>
+          <p data-i18n="experience.rl.text">Developed validation modules, applied Approximate Policy Iteration, and transferred trained parameters into MATLAB simulation and a real device.</p>
+        </article>
+        <article class="experience-item">
+          <span class="time">Jun 2024 - Aug 2024</span>
+          <h3 data-i18n="experience.intern.title">Data Analytic & Collection Intern</h3>
+          <p data-i18n="experience.intern.text">Collected, cleaned, categorized, and crawled web data to support data-driven business analysis at Beijing Shangqi Digital Technology Co., Ltd.</p>
+        </article>
+      </section>
+    </section>
+
+    <section class="panel projects-panel" id="projects">
+      <div class="projects-head">
+        <div class="section-title">
+          <p class="eyebrow" data-i18n="section.projects">Projects</p>
+          <h2 data-i18n="projects.title">Selected GitHub Work</h2>
+        </div>
+        <div class="filter-group" aria-label="Project filters">
+          <button class="filter-button active" type="button" data-filter="all" data-i18n="filter.all">All</button>
+          <button class="filter-button" type="button" data-filter="ai">AI</button>
+          <button class="filter-button" type="button" data-filter="data" data-i18n="filter.data">Data</button>
+          <button class="filter-button" type="button" data-filter="software" data-i18n="filter.software">Software</button>
         </div>
       </div>
 
-      <div class="portrait-panel" aria-label="个人照片">
-        <img src="images/MyPic.jpg" alt="Shanli Ouyang 的个人照片">
-      </div>
-    </section>
-
-    <section class="section about-section" id="about">
-      <div class="section-heading">
-        <p class="eyebrow">About</p>
-        <h2>把想法做成可以被看见的东西。</h2>
-      </div>
-      <div class="about-grid">
-        <article class="info-card">
-          <span class="card-number">01</span>
-          <h3>个人介绍</h3>
-          <p>我正在建设自己的网页空间，用它记录成长、展示项目，也作为 GitHub Pages 上的个人主页。</p>
+      <div class="project-grid">
+        <article class="project-card" data-category="ai data">
+          <span class="project-tag">RAG</span>
+          <h3>EngineeringRAG</h3>
+          <p data-i18n="project.engineeringrag">Agent-enhanced formula retrieval workflow with planning, semantic re-ranking, critic verification, and multilingual reasoning.</p>
+          <a href="https://github.com/ShanliOuyang/EngineeringRAG" target="_blank" rel="noreferrer">GitHub</a>
         </article>
-        <article class="info-card">
-          <span class="card-number">02</span>
-          <h3>关注方向</h3>
-          <p>我对网页设计、前端开发、视觉表达和数字作品展示感兴趣，喜欢让页面既清晰又有质感。</p>
+        <article class="project-card" data-category="ai software">
+          <span class="project-tag">RL</span>
+          <h3>PendulumStability</h3>
+          <p data-i18n="project.pendulum">Reinforcement learning project for stabilizing an inverted pendulum, with validation and MATLAB visualization.</p>
+          <a href="https://github.com/ShanliOuyang/PendulumStability" target="_blank" rel="noreferrer">GitHub</a>
         </article>
-        <article class="info-card">
-          <span class="card-number">03</span>
-          <h3>页面计划</h3>
-          <p>之后可以继续加入简历、项目截图、课程作品、博客文章、社交链接和更多互动效果。</p>
+        <article class="project-card" data-category="data software">
+          <span class="project-tag">Hadoop</span>
+          <h3>StockFlowCount</h3>
+          <p data-i18n="project.stock">Distributed stock capital-flow analysis with Hadoop MapReduce and interactive web visualization.</p>
+          <a href="https://github.com/ShanliOuyang/StockFlowCount" target="_blank" rel="noreferrer">GitHub</a>
         </article>
-      </div>
-    </section>
-
-    <section class="section work-section" id="work">
-      <div class="section-heading compact">
-        <p class="eyebrow">Selected Work</p>
-        <h2>作品与内容模块</h2>
-      </div>
-
-      <div class="work-list">
-        <article class="work-item">
-          <div>
-            <p class="work-tag">Website</p>
-            <h3>个人主页</h3>
-          </div>
-          <p>使用 HTML、CSS 和 JavaScript 搭建，可部署到 GitHub Pages。</p>
+        <article class="project-card" data-category="software">
+          <span class="project-tag">Java</span>
+          <h3>JungleChessGame</h3>
+          <p data-i18n="project.chess">Java desktop animal chess game with rule validation, GUI rendering, state updates, and AI opponent logic.</p>
+          <a href="https://github.com/ShanliOuyang/JungleChessGame" target="_blank" rel="noreferrer">GitHub</a>
         </article>
-        <article class="work-item">
-          <div>
-            <p class="work-tag">Portfolio</p>
-            <h3>作品展示区</h3>
-          </div>
-          <p>预留项目卡片位置，方便后续添加图片、链接、课程作业或开发项目。</p>
+        <article class="project-card" data-category="software">
+          <span class="project-tag">DP</span>
+          <h3>PictureCompress</h3>
+          <p data-i18n="project.picture">Image compression and expansion program using dynamic programming for intelligent pixel-block resizing.</p>
+          <a href="https://github.com/ShanliOuyang/PictureCompress" target="_blank" rel="noreferrer">GitHub</a>
         </article>
-        <article class="work-item">
-          <div>
-            <p class="work-tag">Design</p>
-            <h3>视觉与排版</h3>
-          </div>
-          <p>采用响应式布局，在手机和电脑上都能保持整洁清楚的阅读体验。</p>
+        <article class="project-card" data-category="ai data">
+          <span class="project-tag">LLM</span>
+          <h3>ToSQL-FineTuning</h3>
+          <p data-i18n="project.tosql">Fine-tuning project for translating natural-language questions into SQL-oriented outputs.</p>
+          <a href="https://github.com/ShanliOuyang/ToSQL-FineTuning" target="_blank" rel="noreferrer">GitHub</a>
+        </article>
+        <article class="project-card" data-category="data">
+          <span class="project-tag">Stats</span>
+          <h3>SurvivalAnalysis</h3>
+          <p data-i18n="project.survival">Statistical modeling project focused on survival analysis methods and applied data interpretation.</p>
+          <a href="https://github.com/ShanliOuyang/SurvivalAnalysis" target="_blank" rel="noreferrer">GitHub</a>
         </article>
       </div>
     </section>
 
-    <section class="contact-section" id="contact">
-      <div>
-        <p class="eyebrow">Contact</p>
-        <h2>欢迎来到我的网页。</h2>
+    <section class="skills-row" id="skills">
+      <div class="skills-title">
+        <p class="eyebrow" data-i18n="section.skills">Skills</p>
+        <h2 data-i18n="skills.title">Technical Stack</h2>
       </div>
-      <p>
-        你可以把这里改成邮箱、GitHub、LinkedIn、微信二维码或任何希望公开展示的联系方式。
-      </p>
-      <a class="button primary" href="mailto:your-email@example.com">发送邮件</a>
+      <div class="skill-track" aria-label="Skills">
+        <span>Python</span>
+        <span>Java</span>
+        <span>MATLAB</span>
+        <span>SQL</span>
+        <span>PyTorch</span>
+        <span>Scikit-learn</span>
+        <span>RAG</span>
+        <span>Multi-Agent Systems</span>
+        <span>Reinforcement Learning</span>
+        <span>Hadoop MapReduce</span>
+        <span>Spark</span>
+        <span>Kafka</span>
+        <span>Git</span>
+        <span>Docker</span>
+        <span>Linux/Shell</span>
+        <span>FastAPI</span>
+        <span>AWS</span>
+        <span>Mandarin</span>
+        <span>Cantonese</span>
+        <span>English</span>
+      </div>
     </section>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Shanli Ouyang · <span data-i18n="footer.text">Personal website built for GitHub Pages</span></p>
+    </footer>
   </main>
-
-  <footer class="site-footer">
-    <p>© <span id="year"></span> Shanli Ouyang. Built with HTML, CSS and JavaScript.</p>
-  </footer>
 
   <script src="js/script.js"></script>
 </body>
